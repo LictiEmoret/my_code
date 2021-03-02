@@ -54,7 +54,6 @@ class Field():
         self.sleep(self.delay)
         
 
-
 class Stuff():
     def __init__(self, field):
         self.stuff_coord = [0, 0]
@@ -131,8 +130,7 @@ class Moves():
             else:
                 raise Exception 
         
-        self.field.field[x1][y1 + 1], self.field.field[x1][y1 - (len_section - 1)] = 
-                self.field.field[x1][y1 - (len_section - 1)], self.field.field[x1][y1 + 1]
+        self.field.field[x1][y1 + 1], self.field.field[x1][y1 - (len_section - 1)] = self.field.field[x1][y1 - (len_section - 1)], self.field.field[x1][y1 + 1]
         
         if flag_for_seconds_or_main_foo:
             self.global_y1 += 1
@@ -164,8 +162,7 @@ class Moves():
         if y1 == 0:
             raise Exception
 
-        self.field.field[x1][y1 - 1], self.field.field[x1][y1 + (len_section - 1)] = 
-                self.field.field[x1][y1 + (len_section - 1)], self.field.field[x1][y1 - 1]
+        self.field.field[x1][y1 - 1], self.field.field[x1][y1 + (len_section - 1)] = self.field.field[x1][y1 + (len_section - 1)], self.field.field[x1][y1 - 1]
             
         if flag_for_seconds_or_main_foo:
             self.global_y1 -= 1
@@ -194,8 +191,7 @@ class Moves():
             else:
                 raise Exception
 
-        self.field.field[x1 + 1][y1], self.field.field[x1 - (len_section - 1)][y1] = 
-                self.field.field[x1 - (len_section - 1)][y1], self.field.field[x1 + 1][y1]
+        self.field.field[x1 + 1][y1], self.field.field[x1 - (len_section - 1)][y1] = self.field.field[x1 - (len_section - 1)][y1], self.field.field[x1 + 1][y1]
             
         if flag_for_seconds_or_main_foo:
             self.global_x1 += 1
@@ -227,8 +223,7 @@ class Moves():
         if x1 == 0:
             raise Exception
 
-        self.field.field[x1 - 1][y1], self.field.field[x1 + (len_section - 1)][y1] = 
-                self.field.field[x1 + (len_section - 1)][y1], self.field.field[x1 - 1][y1]
+        self.field.field[x1 - 1][y1], self.field.field[x1 + (len_section - 1)][y1] = self.field.field[x1 + (len_section - 1)][y1], self.field.field[x1 - 1][y1]
             
         if flag_for_seconds_or_main_foo:
             self.global_x1 -= 1
@@ -263,6 +258,7 @@ class Moves():
         
         return True
 
+    
 class Snake():
     def __init__(self, moves):
         # объект класса Moves
@@ -355,6 +351,7 @@ class Qeue():
 
         return move
 
+    
 class KeyProcess():
     def __init__(self, keyboard):
         self.listener = keyboard.Listener(on_press=KeyProcess.onPress)
@@ -373,7 +370,6 @@ class KeyProcess():
 
         if key == keyboard.Key.left:
             Qeue.ap_qeue('a')
-
 
 
 score = Score()
