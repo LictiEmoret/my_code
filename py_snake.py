@@ -104,7 +104,7 @@ class Moves():
             try:
                 func(self, *args)
             except:
-                os.system('cls')
+                os.system(field.clear_console)
                 print('YOU DIED!!!1', 'YOUR SCORE: {}\n'.format(self.score.score), sep='\n')
                 sys.exit()
         return wrap
