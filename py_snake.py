@@ -27,7 +27,7 @@ class Field():
 
         # наполнение поля с размерами size_of_field х size_of_field
         self.size_of_field = size
-        self.field = [list(['.' for j in range(size_of_field)]) for i in range(size_of_field)]
+        self.field = [['.' for j in range(size_of_field)] for i in range(size_of_field)]
         for i in range(2):
             self.field[i][1] = '*'
 
